@@ -16,7 +16,7 @@ ranked_products AS (
         DENSE_RANK() OVER (PARTITION BY category ORDER BY category_amount DESC) AS rank
     FROM product_category_sales
 )
--- Оставляем только топ-2 (с учётом равенств на втором месте)
+    
 SELECT 
     category,
     product
