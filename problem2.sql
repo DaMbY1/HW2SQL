@@ -1,5 +1,4 @@
 WITH product_category_sales AS (
-    -- Суммируем продажи по каждому товару в каждой категории
     SELECT 
         product,
         category,
@@ -8,7 +7,6 @@ WITH product_category_sales AS (
     GROUP BY product, category
 ),
 ranked_products AS (
-    -- Присваиваем ранг товарам внутри категории по убыванию суммы
     SELECT 
         product,
         category,
