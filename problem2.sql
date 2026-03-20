@@ -19,8 +19,7 @@ ranked_products AS (
 -- Оставляем только топ-2 (с учётом равенств на втором месте)
 SELECT 
     category,
-    product,
-    category_amount
+    product
 FROM ranked_products
 WHERE rank <= 2
 ORDER BY category, rank;
